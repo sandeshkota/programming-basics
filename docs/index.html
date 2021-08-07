@@ -13,25 +13,15 @@
   <script>
     window.$docsify = {
       name: 'About Programming',
-      repo: 'https://github.com/sandeshkota/programming-basics',
-      homepage   : 'index.md',
-      loadSidebar: true,
+      repo: '',
       search: 'auto',
+      loadSidebar: true,
       auto2top: true,
       coverpage: true,
-      subMaxLevel: 3,
-      autoHeader: true,
-      tabs: {
-        persist: true,
-        sync: true,
-        theme: 'classic',
-        tabComments: true,
-        tabHeadings: true
-      },
-      executeScript: true,
-      search: {
-        noData: 'No results!',
-        placeholder: 'Search question'
+      subMaxLevel: 4,
+      sidebarDisplayLevel: 1,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
       }
     }
   </script>
