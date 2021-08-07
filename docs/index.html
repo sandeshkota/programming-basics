@@ -17,12 +17,18 @@
     window.$docsify = {
       name: 'About Programming',
       homepage : 'index.md',
-      loadSidebar: '_sidebar.md',
-      subMaxLevel: 2
+      loadSidebar: true,
+      subMaxLevel: 2,
+      search: {
+        noData: 'No results!',
+        placeholder: 'Search a topic'
+      }
     }
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
 
+  <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
 </body>
 </html>
