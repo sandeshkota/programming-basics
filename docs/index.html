@@ -12,7 +12,27 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      //...
+      name: 'Interview-Questions',
+      repo: 'https://github.com/sandeshkota/programming-basics',
+      homepage   : 'index.md',
+      loadSidebar: true,
+      search: 'auto',
+      auto2top: true,
+      coverpage: true,
+      subMaxLevel: 3,
+      autoHeader: true,
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: 'classic',
+        tabComments: true,
+        tabHeadings: true
+      },
+      executeScript: true,
+      search: {
+        noData: 'No results!',
+        placeholder: 'Search question'
+      }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
