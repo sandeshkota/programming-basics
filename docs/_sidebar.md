@@ -1,2 +1,2 @@
 * [Home](/?id=table-of-contents) 
-* [SOLID Principles](/SOLID/) 
+* [SOLID Principles](/SOLID/ "SOLID Principles in .Net") 
