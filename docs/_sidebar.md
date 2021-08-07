@@ -1,2 +1,2 @@
 * [Home](/?id=table-of-contents) 
-* [SOLID Principles](/SOLID/principles.md) 
+* [SOLID Principles](/SOLID/) 
