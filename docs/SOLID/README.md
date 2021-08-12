@@ -203,6 +203,51 @@ interface IEmail
 - Entities must depend on abstractions, not on concretions.
 - High level modules should not depend on low level modules
 
+```
+// Consider
+interface ILogger
+{
+    void Log();
+}
+class Logger: ILogger
+{
+    public void Log() {}
+}
+
+// Bad
+class User
+{
+    private ILogger _logger;
+    
+    public User()
+    {
+        this._logger = new Logger();
+    }
+    
+    public SaveUser()
+    {
+        //.... implementation
+        _logger.Log();
+    } 
+}
+
+// Good
+class User
+{
+    private ILogger _logger;
+    
+    public User(ILogger logger)
+    {
+        this._logger = logger;
+    }
+    
+    public SaveUser()
+    {
+        //.... implementation
+        _logger.Log();
+    } 
+}
+```
 
 ### If not followed
 - End up with tight coupling with other modules
