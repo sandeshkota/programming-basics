@@ -1,13 +1,14 @@
+### Definition
 Solid Principles are sets of principles in Object Oriented Software Development. SOLID is an acronym for five design principles intended to make software design more understandable, flexible and maintainable.
 
-### origin
+### Origin
 - SOLID principles are subset of many principles promoted by Robert C. Martin (Uncle Bob)
 - The SOLID acronym was first introduced by Michael Feathers
 
 ### SRP - Single Responsibility Principle
 - A Class should have only one reason to change (A class should do only one job).
 
-#### benifits
+Benifits
 - Maintainability
 - Testability
 - Flexibility and Extensibility
@@ -45,6 +46,27 @@ interface IEmail
 
 ### ISP - Interface Segregation Principle
 - A client should never be forced to implement an interface that it doesn’t use.
+- One fat intreface need to be split to many smaller and relevant interfaces so that clients can known about the interfaces that are relevant to them.
+```
+// Bad
+interface IUser
+{
+    bool Login(string userName, string password);
+    bool Register(string userName, string password, string email);
+    bool SendEmail(string emailContent);
+}
+
+// Good
+interface IUser
+{
+    bool Login(string userName, string password);
+    bool Register(string userName, string password, string email);
+}
+interface IEmail
+{
+    bool SendEmail(string emailContent);
+}
+```
 
 ### DIP - Dependency Inversion Principle
 - Entities must depend on abstractions, not on concretions.
