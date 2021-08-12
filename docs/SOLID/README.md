@@ -15,7 +15,7 @@ Benifits
 - Parallel Development
 - Loose coupling
 
-// Bad
+Bad
 ```csharp
 interface IUser
 {
@@ -25,8 +25,8 @@ interface IUser
 }
 ```
 
-// Good
-```
+Good
+```csharp
 interface IUser
 {
     bool Login(string userName, string password);
@@ -42,8 +42,8 @@ interface IEmail
 - Software Entities should be open for extension and closed for modification.
 
 
-// Bad  
-```
+Bad  
+```csharp
 class Employee
 {
     public string EmployeeType { get; set; }
@@ -67,8 +67,8 @@ class Employee
 }
 ```
 
-// Good  
-```
+Good  
+```csharp
 class Employee
 {
     public string EmployeeType { get; set; }
@@ -112,8 +112,8 @@ Implementation Guidelines
 - Client should not know which specific subtype they are calling
 - New derived classes just extend without replacing the funcitonality of old classes
 
-// Bad - For Contract employees there will not be any bonus amount.
-```
+Bad - For Contract employees there will not be any bonus amount.
+```csharp
 interface IEmployee
 {
     DateTime GetJoiningDate();
@@ -144,8 +144,8 @@ class ContractEmployee: IEmployee
 }
 ```
 
-// Good
-```
+Good
+```csharp
 interface IEmployee
 {
     DateTime GetJoiningDate();   
@@ -175,8 +175,8 @@ class ContractEmployee: IEmployee
 }
 ```
 
-// usage
-```
+Usage
+```csharp
 IEmployee emp = new ContractEmployee();
 IEmployee pEmp = new PermanentEmployee();
 IEmployeeBonus pBonusEmp = new PermanentEmployee();
@@ -186,8 +186,8 @@ IEmployeeBonus pBonusEmp = new PermanentEmployee();
 - A client should never be forced to implement an interface that it doesn’t use.
 - One fat intreface need to be split to many smaller and relevant interfaces so that clients can known about the interfaces that are relevant to them.
 
-// Bad
-```
+Bad
+```csharp
 interface IUser
 {
     bool Login(string userName, string password);
@@ -196,8 +196,8 @@ interface IUser
 }
 ```
 
-// Good
-```
+Good
+```csharp
 interface IUser
 {
     bool Login(string userName, string password);
@@ -213,8 +213,8 @@ interface IEmail
 - Entities must depend on abstractions, not on concretions.
 - High level modules should not depend on low level modules
 
-// Consider
-```
+Consider
+```csharp
 interface ILogger
 {
     void Log();
@@ -225,8 +225,8 @@ class Logger: ILogger
 }
 ```
 
-// Bad
-```
+Bad
+```csharp
 class User
 {
     private ILogger _logger;
@@ -244,8 +244,8 @@ class User
 }
 ```
 
-// Good
-```
+Good
+```csharp
 class User
 {
     private ILogger _logger;
