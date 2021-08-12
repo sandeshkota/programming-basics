@@ -38,6 +38,64 @@ interface IEmail
 
 ### OCP - Open Close Principle
 - Software Entities should be open for extension and closed for modification.
+```
+// Bad
+class Employee
+{
+    public string EmployeeType { get; set; }
+    public decimal Salary { get; set; }
+    
+    public Employee(string employeeType, decimal salary)
+    {
+        this.EmployeeType = employeeType;
+        this.Salary = salary;
+    }
+
+    public decimal GetBonusAmount()
+    {
+        if (this.EmployeeType == "permanent")
+        {
+            return this.Salary * 1;
+        }
+        
+        return this.Salary * 0.5;
+    }
+}
+
+// Good
+class Employee
+{
+    public string EmployeeType { get; set; }
+    public decimal Salary { get; set; }
+    
+    public Employee(string employeeType, decimal salary)
+    {
+        this.EmployeeType = employeeType;
+        this.Salary = salary;
+    }
+
+    public decimal GetBonusAmount()
+    {
+        return this.Salary * 0.5;
+    }
+}
+
+class PermanentEmployee
+{
+    public decimal GetBonusAmount()
+    {
+        return this.Salary * 1;
+    }
+}
+
+class ContractEmployee
+{
+    public decimal GetBonusAmount()
+    {
+        return this.Salary * 0.5;
+    }
+}
+```
 
 ### LSP - Liskov Substitution Principle
 - Objects in a program should be replaceable with instances of thier subtypes without altering the correctness of that program.
