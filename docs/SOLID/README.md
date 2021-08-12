@@ -39,7 +39,7 @@ interface IEmail
 ### OCP - Open Close Principle
 - Software Entities should be open for extension and closed for modification.
 ```
-// Bad
+// Bad  
 class Employee
 {
     public string EmployeeType { get; set; }
@@ -61,7 +61,8 @@ class Employee
         return this.Salary * 0.5;
     }
 }
-// Good
+
+// Good  
 class Employee
 {
     public string EmployeeType { get; set; }
