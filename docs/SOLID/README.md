@@ -15,7 +15,7 @@ Benifits
 - Parallel Development
 - Loose coupling
 
-```
+```csharp
 // Bad
 interface IUser
 {
