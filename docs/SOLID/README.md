@@ -61,7 +61,6 @@ class Employee
         return this.Salary * 0.5;
     }
 }
-
 // Good
 class Employee
 {
@@ -87,7 +86,6 @@ class PermanentEmployee
         return this.Salary * 1;
     }
 }
-
 class ContractEmployee
 {
     public decimal GetBonusAmount()
