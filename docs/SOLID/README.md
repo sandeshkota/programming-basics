@@ -38,6 +38,7 @@ interface IEmail
 
 ### OCP - Open Close Principle
 - Software Entities should be open for extension and closed for modification.
+- 
 ```
 // Bad  
 class Employee
@@ -87,7 +88,7 @@ class PermanentEmployee
         return this.Salary * 1;
     }
 }
-class ContractEmployee
+class TemporaryEmployee
 {
     public decimal GetBonusAmount()
     {
@@ -100,10 +101,83 @@ class ContractEmployee
 - Objects in a program should be replaceable with instances of thier subtypes without altering the correctness of that program.
 - Reference of base class can be replaced with derived class without affecting the functionality of the program module.
 - Derived types should be substitutable for its base types
+- Extension of OCP
+
+Implementation Guidelines
+- No new exceptions can be thrown by the sub type
+- Client should not know which specific subtype they are calling
+- New derived classes just extend without replacing the funcitonality of old classes
+
+```
+// Bad - For Contract employees there will not be any bonus amount.
+interface IEmployee
+{
+    DateTime GetJoiningDate();
+    bool CalculateBonus();
+}
+
+class PermanentEmployee: IEmployee
+{
+    DateTime GetJoiningDate()
+    {
+        // .... implementation
+    }
+    public bool CalculateBonus()
+    {
+        return 10000;
+    }
+}
+class ContractEmployee: IEmployee
+{
+    DateTime GetJoiningDate()
+    {
+        // .... implementation
+    }
+    public bool CalculateBonus()
+    {
+        throw new NotImplementedException();
+    }
+}
+
+// Good
+interface IEmployee
+{
+    DateTime GetJoiningDate();   
+}
+interface IEmployeeBonus
+{
+    bool CalculateBonus();
+}
+
+class PermanentEmployee: IEmployee, IEmployeeBonus
+{
+    DateTime GetJoiningDate()
+    {
+        // .... implementation
+    }
+    public bool CalculateBonus()
+    {
+        return 10000;
+    }
+}
+class ContractEmployee: IEmployee
+{
+    DateTime GetJoiningDate()
+    {
+        // .... implementation
+    }
+}
+
+// usage
+IEmployee emp = new ContractEmployee();
+IEmployee pEmp = new PermanentEmployee();
+IEmployeeBonus pBonusEmp = new PermanentEmployee();
+```
 
 ### ISP - Interface Segregation Principle
 - A client should never be forced to implement an interface that it doesn’t use.
 - One fat intreface need to be split to many smaller and relevant interfaces so that clients can known about the interfaces that are relevant to them.
+
 ```
 // Bad
 interface IUser
