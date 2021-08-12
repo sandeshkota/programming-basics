@@ -1,5 +1,5 @@
 # Basics of Programming
-The idea is to document the basics and the initial ares that should be known for any type of Programming
+The idea is to document the basics and the initial areas that should be known for any type of Programming
 
 [Start Reading here](https://sandeshkota.github.io/programming-basics/)
 
