@@ -11,7 +11,7 @@ Solid Principles are sets of principles in Object Oriented Software Development.
 - Software Entities should be open for extension and closed for modification.
 
 ### LSP - Liskov Substitution Principle
-- Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.
+- Objects in a program should be replaceable with instances of thier subtypes without altering the correctness of that program.
 
 ### ISP - Interface Segregation Principle
 - A client should never be forced to implement an interface that it doesn’t use.
