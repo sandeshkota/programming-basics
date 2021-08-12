@@ -1,5 +1,9 @@
 Solid Principles are sets of principles in Object Oriented Software Development. SOLID is an acronym for five design principles intended to make software design more understandable, flexible and maintainable.
 
+### origin
+- SOLID principles are subset of many principles promoted by Robert C. Martin (Uncle Bob)
+- The SOLID acronym was first introduced by Michael Feathers
+
 ### SRP - Single Responsibility Principle
 - A Class should have only one reason to change (A class should do only one job).
 
