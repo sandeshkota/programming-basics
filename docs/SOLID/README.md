@@ -5,7 +5,7 @@ Solid Principles are sets of principles in Object Oriented Software Development.
 - SOLID principles are subset of many principles promoted by Robert C. Martin (Uncle Bob)
 - The SOLID acronym was first introduced by Michael Feathers
 
-### SRP - Single Responsibility Principle
+## SRP - Single Responsibility Principle
 - A Class should have only one reason to change (A class should do only one job).
 
 Benifits
@@ -38,7 +38,7 @@ interface IEmail
 }
 ```
 
-### OCP - Open Close Principle
+## OCP - Open Close Principle
 - Software Entities should be open for extension and closed for modification.
 
 
@@ -101,7 +101,7 @@ class TemporaryEmployee
 }
 ```
 
-### LSP - Liskov Substitution Principle
+## LSP - Liskov Substitution Principle
 - Objects in a program should be replaceable with instances of thier subtypes without altering the correctness of that program.
 - Reference of base class can be replaced with derived class without affecting the functionality of the program module.
 - Derived types should be substitutable for its base types
@@ -182,7 +182,7 @@ IEmployee pEmp = new PermanentEmployee();
 IEmployeeBonus pBonusEmp = new PermanentEmployee();
 ```
 
-### ISP - Interface Segregation Principle
+## ISP - Interface Segregation Principle
 - A client should never be forced to implement an interface that it doesn’t use.
 - One fat intreface need to be split to many smaller and relevant interfaces so that clients can known about the interfaces that are relevant to them.
 
@@ -209,7 +209,7 @@ interface IEmail
 }
 ```
 
-### DIP - Dependency Inversion Principle
+## DIP - Dependency Inversion Principle
 - Entities must depend on abstractions, not on concretions.
 - High level modules should not depend on low level modules
 
