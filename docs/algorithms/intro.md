@@ -1,8 +1,19 @@
 ### Algorithms
-A setup of instructions to achieve some result
+A setup of instructions to achieve some result. 
+
+Guidelines
+- The steps in an algorithm must be ina specific order
+- The also needs to be distinct (and small)
+- Should produce a result
+- Should complete in finite amount of time
+
+
 
 ## Big-O notation
 A notation which indicates the worst possible performance value of an algorithm (time & memory)
+
+### O(1) - Constant Time
+- Reading a value from an array
 
 ### O(n) - Linear
 - Linear search
@@ -12,9 +23,6 @@ A notation which indicates the worst possible performance value of an algorithm 
 - Logarthimic is opposite of exponent
 - 2^4 = 16 (2*2*2*2)
 - log2 16 = 4 (2*2*2*2)
-
-### O(1) - Constant Time
-- Reading a value from an array
 
 ### O (n^2) - Quadratic
 - consider n elemnts and a grid should be plotted
