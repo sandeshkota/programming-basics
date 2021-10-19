@@ -4,4 +4,4 @@
 
 ## [UML Diagram](./UML/)
 
-## [Algorithms](./algorithms/)
+## [Algorithms](./algorithms/readme)
