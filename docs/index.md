@@ -3,3 +3,5 @@
 ## [SOLID Principles](./SOLID/)
 
 ## [UML Diagram](./UML/)
+
+## [Algorithms](./algorithms/)
